@@ -3,14 +3,17 @@ import VersoBlog
 import AnalysisBook.Home
 import AnalysisBook.LiterateModule
 import Sec21
--- import Sec22
--- import Sec23
--- import Sec2E
--- import Sec31
--- import Sec41
--- import Sec42
--- import Sec43
-
+import Sec22
+import Sec23
+import Sec2E
+import Sec31
+import Sec41
+import Sec42
+import Sec43
+import Sec51
+import Sec52
+import Sec53
+import Sec54
 
 open Verso Genre Blog Site Syntax
 
@@ -51,10 +54,6 @@ def theme : Theme := { Theme.default with
   |>.override #[] ⟨do return {{<div class="frontpage"><h1>{{← param "title"}}</h1> {{← param "content"}}</div>}}, id⟩
 
 
-analysis_page sec51 from Analysis.Section_5_1  as "Cauchy sequences"
-analysis_page sec52 from Analysis.Section_5_2  as "Equivalent Cauchy sequences"
-analysis_page sec53 from Analysis.Section_5_3  as "The construction of the real numbers"
-analysis_page sec54 from Analysis.Section_5_4  as "Ordering the reals"
 
 def demoSite : Site := site AnalysisBook.Home /
   static "static" ← "./static_files"
