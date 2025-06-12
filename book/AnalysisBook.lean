@@ -3,13 +3,13 @@ import VersoBlog
 import AnalysisBook.Home
 import AnalysisBook.LiterateModule
 import Sec21
-import Sec22
-import Sec23
-import Sec2E
-import Sec31
-import Sec41
-import Sec42
-import Sec43
+-- import Sec22
+-- import Sec23
+-- import Sec2E
+-- import Sec31
+-- import Sec41
+-- import Sec42
+-- import Sec43
 
 
 open Verso Genre Blog Site Syntax
@@ -72,4 +72,10 @@ def demoSite : Site := site AnalysisBook.Home /
   "sec54" sec54
 
 
-def main := blogMain theme demoSite
+def baseUrl := "https://teorth.github.io/analysis/docs/"
+
+def linkTargets : Code.LinkTargets where
+  const name := .some <| s!"{baseUrl}find?pattern={name}#doc"
+  definition name := .some <| s!"{baseUrl}find?pattern={name}#doc"
+
+def main := blogMain theme demoSite (linkTargets := linkTargets)
