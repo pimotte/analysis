@@ -24,6 +24,7 @@ lean_lib «Analysis» where
 
 lean_exe "literate-extract" where
   root := `LiterateExtract
+  supportInterpreter := true
 
 meta if get_config? env = some "dev" then
 require «doc-gen4» from git
